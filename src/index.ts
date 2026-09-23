@@ -11,19 +11,20 @@ import { mkdirSync } from 'node:fs';
 /**
  * # 嗯
  */
-export class QQI {
+export class InternalModule {
   #filename: string;
 
   #available: boolean = true;
 
-  /**  值是否可用  */
+  /**
+   * # 值是否可用  
+   */
   get available(): boolean {
     return this.#available;
   }
 
   /**
-   *  构造函数
-   *
+   *  # 构造函数
    * @param fileName  文件名
    */
   constructor(fileName: string) {
@@ -35,13 +36,12 @@ export class QQI {
       return;
     }
     this.#available = true;
-    this.#filename = pathJoin(homeDir, '.earthnut.dev.data', `${fileName}`);
+    this.#filename = pathJoin(homeDir, '.mudbean.data', `${fileName}`);
+    return this;
   }
 
   /**
-   * 获取某文件的
-   *
-   *
+   * # 获取某文件的
    * @param fileName 读取文件的地址
    * @returns 当读取受限或是读取失败返回 null；可读取却没有数据，返回是一个空对象
    */
@@ -61,7 +61,7 @@ export class QQI {
     }
   }
   /**
-   * 写入文件
+   * # 写入文件
    *
    * 写入并不是总能如意，当写入受限（this.available 值为 false）或是写入不成功都将返回 false
    *

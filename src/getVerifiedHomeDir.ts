@@ -4,9 +4,7 @@ import { unlinkSync } from 'node:fs';
 import { dog } from './dog';
 
 /**
- *
- * 获取真实的跟路径
- *
+ * # 获取真实的跟路径
  */
 export function getVerifiedHomeDir() {
   /**  跟文件  */

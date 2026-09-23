@@ -17,9 +17,9 @@ const dependencies = packageJson.dependencies;
   'dependencies',
   'packageManager',
   'jja',
-  'type'
+  'type',
 ].forEach(key => delete packageJson[key]);
-  const esPrefix = 'es'; // es 前缀
+const esPrefix = 'es'; // es 前缀
 const cjsPrefix = 'cjs'; // cjs 前缀
 const dtsPrefix = 'es'; // 类型文件的前缀
 // 查看当前打包 dist 文件路径
@@ -35,9 +35,9 @@ packageJson = {
     url: 'https://mudbean.cn',
   },
   description: '简单的文件读写',
-  "sideEffects": false,
+  sideEffects: false,
   license: 'MIT',
-  files: [cjsPrefix, esPrefix ,  'LICENSE', 'README.md','CHANGELOG.md'],
+  files: [cjsPrefix, esPrefix, 'LICENSE', 'README.md', 'CHANGELOG.md'],
   exports: {
     '.': {
       import: {
@@ -50,16 +50,16 @@ packageJson = {
       },
     },
   },
-  keywords: ['qqi', 'mudbean','vvi'],
-  homepage: 'https://npm.lmssee.com/qqi',
+  keywords: ['mudbean', 'vvi', '哈哈哈哈'],
+  homepage: 'https://npms.gleanings.cn/internal-module',
   dependencies,
   bugs: {
-    url: 'https://github.com/MrMudBean/qqi/issues',
+    url: 'https://github.com/gleanings/internal-module/issues',
     email: 'Mr.MudBean@outlook.com',
-    }, 
+  },
   repository: {
     type: 'git',
-    url: 'git+https://github.com/MrMudBean/qqi.git',
+    url: 'git+https://github.com/gleanings/internal-module.git',
   },
   publishConfig: {
     access: 'public',
